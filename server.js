@@ -15,14 +15,19 @@ HTTP = Hypertext Transfer Protocol
 import express from "express";
 import "colors";
 
+import dotenv from "dotenv";
+dotenv.config();
+
 import productsRouter from "./routes/productsRouter.js";
 import ordersRouter from "./routes/ordersRouter.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use("/products", productsRouter);
 app.use("/orders", ordersRouter);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`.red);
