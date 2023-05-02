@@ -1,25 +1,23 @@
 import { Router } from "express";
 
+import {
+  getOrders,
+  createOrder,
+  getOrder,
+  replaceOrder,
+  deleteOrder,
+} from "../controllers/orders.js";
+
 const ordersRouter = Router();
 
-ordersRouter.get("/", (req, res) => {
-  res.json({ msg: "GET all orders" });
-});
+ordersRouter.get("/", getOrders);
 
-ordersRouter.post("/", (req, res) => {
-  res.json({ msg: "CREATE a new order" });
-});
+ordersRouter.post("/", createOrder);
 
-ordersRouter.get("/:id", (req, res) => {
-  res.json({ msg: "GET a single order" });
-});
+ordersRouter.get("/:id", getOrder);
 
-ordersRouter.put("/:id", (req, res) => {
-  res.json({ msg: "REPLACE a single order with a new one" });
-});
+ordersRouter.put("/:id", replaceOrder);
 
-ordersRouter.delete("/:id", (req, res) => {
-  res.json({ msg: "DELETE a single order" });
-});
+ordersRouter.delete("/:id", deleteOrder);
 
 export default ordersRouter;

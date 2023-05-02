@@ -7,7 +7,7 @@ HTTP = Hypertext Transfer Protocol
         Routes for HTTP verbs
         Standardized actions (calls)
         Response type
-    [x] Client-server
+    [x] Client-Server
     [x] Stateless
     [x] Cacheable
 */
