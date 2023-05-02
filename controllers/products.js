@@ -1,3 +1,5 @@
+// Here you will need to import an eventual Product model
+
 export const getProducts = (req, res) => {
   // res.setHeader("Content-Type", "application/json");
   // res.send(JSON.stringify({ name: "Nir" }));

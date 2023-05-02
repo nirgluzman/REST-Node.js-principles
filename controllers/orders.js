@@ -1,3 +1,5 @@
+// Here you will need to import an eventual Order model
+
 export const getOrders = (req, res) => {
   res.json({ msg: "GET all orders" });
 };
