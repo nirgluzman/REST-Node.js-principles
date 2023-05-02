@@ -29,7 +29,7 @@ app.post("/products", (req, res) => {
 });
 
 app.get("/products/:id", (req, res) => {
-  res.json({ msg: "GET a single product product" });
+  res.json({ msg: "GET a single product" });
 });
 
 app.put("/products/:id", (req, res) => {
@@ -38,6 +38,26 @@ app.put("/products/:id", (req, res) => {
 
 app.delete("/products/:id", (req, res) => {
   res.json({ msg: "DELETE a single product" });
+});
+
+app.get("/orders", (req, res) => {
+  res.json({ msg: "GET all orders" });
+});
+
+app.post("/orders", (req, res) => {
+  res.json({ msg: "CREATE a new order" });
+});
+
+app.get("/orders/:id", (req, res) => {
+  res.json({ msg: "GET a single order" });
+});
+
+app.put("/orders/:id", (req, res) => {
+  res.json({ msg: "REPLACE a single order with a new one" });
+});
+
+app.delete("/orders/:id", (req, res) => {
+  res.json({ msg: "DELETE a single order" });
 });
 
 app.listen(PORT, () => {
